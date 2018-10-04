@@ -1,3 +1,5 @@
+USE codeup_test_db;
+
 SELECT album_name FROM albums;
 UPDATE albums
 SET sales = sales * 10;
