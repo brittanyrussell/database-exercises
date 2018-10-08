@@ -56,3 +56,16 @@ FROM employees
 JOIN salaries on salaries.emp_no = employees.emp_no
 ORDER BY salaries.salary DESC
 LIMIT 1;
+
+
+-- Another way to do it
+-- SELECT first_name, last_name
+-- FROM employees
+-- WHERE emp_no = (
+-- SELECT emp_no
+-- FROM salaries
+-- WHERE salary in (
+-- select max(salary)
+-- FROM salaries
+-- )
+-- );
