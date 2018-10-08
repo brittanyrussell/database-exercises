@@ -66,6 +66,5 @@ LIMIT 1;
 -- FROM salaries
 -- WHERE salary in (
 -- select max(salary)
--- FROM salaries
--- )
+-- FROM salaries)
 -- );
