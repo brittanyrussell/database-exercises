@@ -1,4 +1,6 @@
+CREATE DATABASE IF NOT EXISTS adlister_db;
 USE adlister_db;
+
 
 -- ****************** SqlDBM: MySQL ******************;
 -- ***************************************************;
@@ -21,7 +23,7 @@ DROP TABLE IF EXISTS `Users`;
 CREATE TABLE Categories
 (
  id       INT unsigned NOT NULL AUTO_INCREMENT ,
- Category VARCHAR(100) NOT NULL ,
+ category VARCHAR(100) NOT NULL ,
 
 PRIMARY KEY (id)
 );
@@ -36,8 +38,9 @@ PRIMARY KEY (id)
 CREATE TABLE Users
 (
  id      INT unsigned NOT NULL AUTO_INCREMENT ,
- Email    VARCHAR(200) NOT NULL ,
- Password VARCHAR(100) NOT NULL ,
+ email    VARCHAR(200) NOT NULL ,
+ password VARCHAR(100) NOT NULL ,
+ username VARCHAR(100) NOT NULL ,
 
 PRIMARY KEY (id)
 );
@@ -53,8 +56,8 @@ CREATE TABLE Ads
 (
  id          INT unsigned NOT NULL AUTO_INCREMENT ,
  user_id     INT unsigned NOT NULL ,
- Title       VARCHAR(500) NOT NULL ,
- Description VARCHAR(5000) NOT NULL ,
+ title       VARCHAR(500) NOT NULL ,
+ description VARCHAR(5000) NOT NULL ,
 
 PRIMARY KEY (id),
 FOREIGN KEY (user_id) REFERENCES Users(id)
