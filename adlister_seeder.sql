@@ -1,4 +1,4 @@
-USE Adlister;
+USE adlister_db;
 
 
 INSERT INTO `Users` (Email, Password)
@@ -19,6 +19,6 @@ INSERT INTO `Categories` (Category)
              ('Car for Sale');
 
 INSERT INTO `Joiner` (ad_id, category_id)
-      VALUES (4, 1),
-             (5, 1),
-             (4, 2);
+      VALUES (1, 1),
+             (2, 1),
+             (1, 2);
