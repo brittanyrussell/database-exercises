@@ -38,9 +38,9 @@ PRIMARY KEY (id)
 CREATE TABLE Users
 (
  id      INT unsigned NOT NULL AUTO_INCREMENT ,
- email    VARCHAR(200) NOT NULL ,
+ email    VARCHAR(200) NOT NULL UNIQUE,
  password VARCHAR(1000) NOT NULL ,
- username VARCHAR(100) NOT NULL ,
+ username VARCHAR(100) NOT NULL UNIQUE,
 
 PRIMARY KEY (id)
 );
