@@ -39,7 +39,7 @@ CREATE TABLE Users
 (
  id      INT unsigned NOT NULL AUTO_INCREMENT ,
  email    VARCHAR(200) NOT NULL ,
- password VARCHAR(100) NOT NULL ,
+ password VARCHAR(1000) NOT NULL ,
  username VARCHAR(100) NOT NULL ,
 
 PRIMARY KEY (id)
